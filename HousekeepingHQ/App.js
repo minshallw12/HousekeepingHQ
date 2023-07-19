@@ -1,24 +1,12 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import CustomComponent from './components/CustomComponent';
-
+import React from "react";
+import { NativeBaseProvider, Box } from "native-base";
+import HamburgerNav from "./components/HamburgerNav";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>My name is Will!</Text>
-      <CustomComponent></CustomComponent>
-      <Text>myfirst</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NativeBaseProvider>
+      <HamburgerNav/>
+      <Box>Hello world</Box>
+    </NativeBaseProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
